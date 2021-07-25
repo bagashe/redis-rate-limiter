@@ -1,6 +1,5 @@
 local config_identifier = KEYS[1]
 local actor_identifier = KEYS[2]
-local timestamp = tonumber(ARGV[1])
 
 local config = redis.call('lrange', config_identifier, 0, -1)
 if not next(config) then
