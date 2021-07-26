@@ -27,10 +27,10 @@ if not next(tuple) then
   y = bump_counter
   if bump_counter > 0 then
     -- Update tuple only if an event has occurred.
-	  redis.call('rpush', key, y)
-	  redis.call('rpush', key, t1)
-	  redis.call('rpush', key, 0)
-	  redis.call('expire', key, expire_in)
+    redis.call('rpush', key, y)
+    redis.call('rpush', key, t1)
+    redis.call('rpush', key, 0)
+    redis.call('expire', key, expire_in)
   end
 else
   y = tonumber(tuple[1])
