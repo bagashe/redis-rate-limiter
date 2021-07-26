@@ -19,9 +19,15 @@ in a three-tuple for each `actor`,`event` pair.
                                                                                                      
 ### Usage                                                                                               
 ```
+1. To check available quota without registering an event.
 evalsha <SHA> 2 api-access <actor-id> <current-timestamp-seconds-since-epoch>                      
+
+2. To check available quota while registering an event.
+evalsha <SHA> 2 api-access <actor-id> <current-timestamp-seconds-since-epoch> 1                      
 ```
 Included `test.sh` provides an example of how to configure an event type. It also shows the rate limiting in action.
+
+
 
 #### The script returns available quota as a fraction. So when the rate limit is reached, it returns "0".                                                                                         
                                                                                                      

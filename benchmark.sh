@@ -14,4 +14,4 @@ let THREADS=THREADS-1
 SHA=`redis-cli SCRIPT LOAD "$(cat ratelimit.lua)"`
 echo $SHA
 
-redis-benchmark -n 1000000 -r 1000 --threads $THREADS evalsha $SHA api-access __rand_int__ , `date +%s`
+redis-benchmark -n 1000000 -r 1000 --threads $THREADS evalsha $SHA api-access __rand_int__ , `date +%s` 1
