@@ -28,5 +28,5 @@ Included `test.sh` provides an example of how to configure an event type. It als
 ### Performance                                                                                         
 Processor: Intel® Core™ i7-8550U CPU @ 1.80GHz × 8                                     
 Using: `benchmark.sh`            
-Results: **116550.12 requests per second** with **99%** of them being served in under **0.6 ms**                     
+Results: **142836.73 requests per second** with **99%** of them being served in under **0.6 ms**                     
 _Note that client and server were running on the same machine. Even so, it proves that performance of this Lua script should not be an issue._                                               

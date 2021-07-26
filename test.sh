@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Assumes that redis-server is running on the same machine, listening to the default port.
 
@@ -12,6 +12,7 @@ redis-cli rpush api-access 300
 for i in {1..100}
 do
 	redis-cli --eval ./ratelimit.lua api-access 999 , `date +%s`
+	redis-cli ttl api-access:999
 	sleep 1
 done
 
